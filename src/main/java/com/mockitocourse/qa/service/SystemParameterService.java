@@ -24,7 +24,6 @@ public class SystemParameterService {
 
     public CountryFlag getCountryFlag(){
         SystemParameterEntity byId = systemParameterRepository.findById("123");
-        log.info(byId.toString());
         return CustomImplementation.prepareCountryFlag(systemParameterQAMapper.map(byId));
     }
 }

@@ -10,7 +10,7 @@ public class CustomImplementation {
     private static ObjectMapper objectMapper = new ObjectMapper();
     public static CountryFlag prepareCountryFlag(SystemParameter sourceObj){
         // convert String(json object) to CountryFlag ( Map)
-        Map<String,Object> resultMap = null;
+        Map<String,String> resultMap = null;
         try {
             log.info(sourceObj.getValue());
             resultMap = objectMapper.readValue(sourceObj.getValue(), Map.class);
