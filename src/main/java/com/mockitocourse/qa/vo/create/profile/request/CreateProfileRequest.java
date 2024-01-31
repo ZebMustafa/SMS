@@ -1,5 +1,6 @@
 package com.mockitocourse.qa.vo.create.profile.request;
 
+import com.mockitocourse.qa.vo.validation.ValidateChildDOB;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
@@ -14,6 +15,7 @@ public class CreateProfileRequest {
     private String name;
     @NotNull(message = "Age should not be null")
     private Integer age;
-    @NotNull(message = "Child DOB should not be null")
+    // custom annotation
+    @ValidateChildDOB // you can write overwrite your own message
     private Date childDOB;
 }
